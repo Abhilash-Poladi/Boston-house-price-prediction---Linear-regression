@@ -1,0 +1,13 @@
+2022-03-30T12:04:25.435472+00:00 app[web.1]:     from jinja2 import escape
+2022-03-30T12:04:25.435472+00:00 app[web.1]: ImportError: cannot import name 'escape' from 'jinja2' (/app/.heroku/python/lib/python3.9/site-packages/jinja2/__init__.py)
+2022-03-30T12:04:25.435683+00:00 app[web.1]: [2022-03-30 12:04:25 +0000] [9] [INFO] Worker exiting (pid: 9)
+2022-03-30T12:04:25.469459+00:00 app[web.1]: [2022-03-30 12:04:25 +0000] [4] [WARNING] Worker with pid 9 was terminated due to signal 15
+2022-03-30T12:04:25.568705+00:00 app[web.1]: [2022-03-30 12:04:25 +0000] [4] [INFO] Shutting down: Master
+2022-03-30T12:04:25.568719+00:00 app[web.1]: [2022-03-30 12:04:25 +0000] [4] [INFO] Reason: Worker failed to boot.
+2022-03-30T12:04:25.751388+00:00 heroku[web.1]: Process exited with status 3
+2022-03-30T12:04:25.839186+00:00 heroku[web.1]: State changed from starting to crashed
+2022-03-30T12:04:53.853666+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=boston-house-price-prediction1.herokuapp.com request_id=3f04d8f5-06bf-434c-93ab-7adfee20cb37 fwd="157.47.102.173" dyno= connect= service= status=503 bytes= protocol=https
+2022-03-30T12:04:54.357768+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=boston-house-price-prediction1.herokuapp.com request_id=57bcd064-c59a-45cf-b783-144405975e9e fwd="157.47.102.173" dyno= connect= service= status=503 bytes= protocol=https
+2022-03-30T12:04:01.027213+00:00 app[api]: Release v8 created by user abhilashraopoladi7@gmail.com
+2022-03-30T12:04:01.027213+00:00 app[api]: Deploy 6a852d77 by user abhilashraopoladi7@gmail.com
+2022-03-30T12:04:24.000000+00:00 app[api]: Build succeeded
