@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .nav{
+        background-color: black;
+        text-align: center;
+        color: white;
+        height: 7vh;
+        padding-top: 10px;
+        
+      }
+
+      form{
+        margin-top: 40px;
+        padding-top: 15px;
+        background-color:salmon;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        height: 50vh;
+        border-radius: 1%;
+      }
+      .main{
+        background-color: gainsboro;
+        display: flex;
+        justify-content: center;
+        height: 70vh;
+      }
+      .btn{
+        background-color: #e7e7e7;
+        border-color: black;
+        border-width: 3px;
+        border-radius: 1%;
+        font-weight: bold;
+        margin-left: 100px;
+      }
+      .output{
+        background-color: white;
+        height: 23vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+<body>
+<div class = "nav">
+  <h2>BOSTON HOUSE PRICE PREDICTION</h2>
+</div>
+
+<div class="main">
+<form action="{{ url_for('predict')}}" method="post">
+
+  <input type="text" name="CRM" placeholder="Per capita crime rate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <input type="text"  name="ZN" placeholder="Residential land zoned"><br><br>
+  
+  <input type="text"  name="IND" placeholder="Non-retail business acres" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+
+  <input type="text"  name="CHA" placeholder="1 if tract bounds river"><br><br>
+
+  <input type="text"  name="NOX" placeholder="Nitrogen oxides conc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  
+  <input type="text"  name="RMS" placeholder="Num of rooms"><br><br>
+  
+  <input type="text"  name="AGE" placeholder="Age">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  
+  <input type="text"  name="DIS" placeholder="Dist to employment centres"><br><br>
+
+  <input type="text" name="RAD" placeholder="Accessibility to radial highways">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <input type="text" name="TAX" placeholder="Property-tax rate"><br><br>
+  
+  <input type="text"  name="PTR" placeholder="Pupil-teacher ratio">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  
+  <input type="text"  name="BLK" placeholder="Proportion of blacks"><br><br>
+  
+  
+  <input type="text" name="LST" placeholder="Lower status % population"><br><br>
+
+
+  <input class = "btn" type="submit" value="Calculate Selling Price now ">
+</form> 
+</div>
+<div class ="output">
+  <br><br><br>
+  <h4>{{ Predicted_price }}</h4>
+</div>
+
+</body>
+</html>
+
